@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarFinder</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="bg-gray-700 p-5 text-white flex justify-between">
+        <div>
+            <h1 class="text-2xl font-bold">CarFinder</h1>
+        </div>
+        <div>
+            <a href="#" class="text-white hover:underline mx-4">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="flex-grow container mx-auto mt-10 px-4 sm:px-0">
+        <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 flex flex-col">
+            <!-- Introduction section -->
+            <div class="text-center">
+                <h2 class="text-2xl font-semibold mb-4">Welcome to the CarFinder Machine Learning App</h2>
+                <p class="text-gray-700">
+                    Take a picture, upload or search for your favorite car and we will help you find a great deal at the nearest dealership.
+                    
+                </p>
+            </div>
+
+            <br>
+
+            <!-- Car Image section -->
+            <div>
+                <h2 class="text-xl mb-4 font-semibold">Take car photo</h2>
+                <div class="flex space-x-4">
+                    <input id="cameraInput" type="file" accept="image/*" capture="environment">
+                </div>
+                <br>
+                <div>or</div>
+                <br>
+                <h2 class="text-xl mb-4 font-semibold">Upload car image</h2>
+                <div class="flex space-x-4">
+                    <label class="block mb-4">
+                        <span class="sr-only">Choose car photo</span>
+                        <input 
+                          id="carInput" 
+                          type="file" 
+                          accept="image/*" 
+                          capture="environment"
+                          class="block w-full text-sm text-gray-500 
+                                 file:mr-4 file:py-2 file:px-4
+                                 file:rounded-full file:border-0
+                                 file:text-sm file:font-semibold
+                                 file:bg-blue-50 file:text-blue-700
+                                 hover:file:bg-blue-100"
+                        >
+                    </label>
+                </div>
+
+                <!-- section for loading circle -->
+                <div style="display: none;" id="loading-circle" class="load"></div>
+
+
+                <!-- Car Search Results Section -->
+                <section class="mt-10 flex-grow">
+                    <h2 class="text-xl mb-4 font-semibold">Car Search Result</h2>
+                    <div id="blogContent" class="mt-2 text-gray-700 space-y-4">
+                        
+                    </div>
+                </section>
+            </div>
+</body>
+</html>
